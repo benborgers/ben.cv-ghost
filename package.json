@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -o tailwind.css --watch"
+    "dev": "tailwindcss -o assets/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
