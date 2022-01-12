@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -o assets/tailwind.css --watch",
-    "build": "tailwindcss -o assets/tailwind.css --minify"
+    "dev": "tailwindcss -i style.css -o assets/built.css --watch",
+    "build": "tailwindcss -i style.css -o assets/built.css --minify"
   },
   "keywords": [],
   "author": "",

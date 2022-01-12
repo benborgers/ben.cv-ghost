@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.kg-callout-card {
+  @apply !rounded-none;
+}
+
+.kg-callout-text {
+  @apply font-sans;
+}
