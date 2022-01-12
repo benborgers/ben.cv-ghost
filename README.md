@@ -2,6 +2,17 @@
 
 This is the [Ghost](https://ghost.org) for my blog at [ben.cv](https://ben.cv).
 
+## Development
+
+Development requires two different commands at the same time:
+
+```sh
+npm run dev
+NODE_ENV=development ghost run
+```
+
+The development server will be live at localhost:2368. You’ll have to hard refresh (cmd+shift+R) to bypass the local cache and get new CSS.
+
 ## Deployment
 
 Zip up the theme with this command:
