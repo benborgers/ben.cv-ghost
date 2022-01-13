@@ -1,7 +1,11 @@
 module.exports = {
   content: ["./**/*.hbs"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ["Georgia", "serif"],
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
