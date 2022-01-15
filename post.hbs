@@ -16,27 +16,27 @@
     {{/prose}}
 
     {{#has tag="#daily"}}
-      <div class="mt-16 space-y-4 sm:space-y-0 sm:flex sm:justify-between">
+      <div class="mt-16 flex justify-between">
         <div>
           {{#get "posts"
-            filter="tags:daily+id:>{{id}}"
+            filter="tags:daily+published_at:<{{published_at}}+id:-{{id}}"
             limit="1"
-            order="id asc"}}
+            order="published_at desc"}}
             {{#foreach posts}}
               <p>
-                <a href="{{url}}" class="text-rose-600 font-bold text-sm">&larr; Previous day ({{title}})</a>
+                <a href="{{url}}" class="text-rose-600 font-bold text-sm">&larr; Previous day</a>
               </p>
             {{/foreach}}
           {{/get}}
         </div>
         <div>
           {{#get "posts"
-            filter="tags:daily+id:<{{id}}"
+            filter="tags:daily+published_at:>{{published_at}}+id:-{{id}}"
             limit="1"
-            order="id desc"}}
+            order="published_at asc"}}
             {{#foreach posts}}
               <p class="text-right">
-                <a href="{{url}}" class="text-rose-600 font-bold text-sm">Next day ({{title}}) &rarr;</a>
+                <a href="{{url}}" class="text-rose-600 font-bold text-sm">Next day &rarr;</a>
               </p>
             {{/foreach}}
           {{/get}}
