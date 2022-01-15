@@ -14,5 +14,34 @@
     {{#> prose}}
       {{content}}
     {{/prose}}
+
+    {{#has tag="#daily"}}
+      <div class="mt-16 space-y-4 sm:space-y-0 sm:flex sm:justify-between">
+        <div>
+          {{#get "posts"
+            filter="tags:daily+id:>{{id}}"
+            limit="1"
+            order="id asc"}}
+            {{#foreach posts}}
+              <p>
+                <a href="{{url}}" class="text-rose-600 font-bold text-sm">&larr; Previous day ({{title}})</a>
+              </p>
+            {{/foreach}}
+          {{/get}}
+        </div>
+        <div>
+          {{#get "posts"
+            filter="tags:daily+id:<{{id}}"
+            limit="1"
+            order="id desc"}}
+            {{#foreach posts}}
+              <p class="text-right">
+                <a href="{{url}}" class="text-rose-600 font-bold text-sm">Next day ({{title}}) &rarr;</a>
+              </p>
+            {{/foreach}}
+          {{/get}}
+        </div>
+      </div>
+    {{/has}}
   </div>
 {{/post}}
