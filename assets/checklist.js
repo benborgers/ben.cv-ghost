@@ -5,7 +5,7 @@ document.querySelectorAll("li").forEach((el) => {
   if (el.innerHTML.startsWith("[ ] ")) {
     el.innerHTML = el.innerHTML.replace(
       "[ ] ",
-      `<span class="h-4 w-4 bg-current rounded-full inline-block ml-0.5 mr-2 translate-y-0.5"></span>`
+      `<span class="h-4 w-4 border-2 border-current bg-neutral-200 rounded-full inline-block ml-0.5 mr-2 translate-y-0.5"></span>`
     );
   }
 
