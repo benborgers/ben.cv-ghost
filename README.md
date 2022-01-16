@@ -23,4 +23,4 @@ npm run build && zip -r ben.cv-ghost.zip *
 
 Then upload in the Ghost dashboard.
 
-Also, upload the `routes.yaml` file in the dashboard (currently under Settings > Labs > Routes).
+Also, upload the `routes.yaml` file separately in the dashboard (currently under Settings > Labs > Routes), since it doesn’t get uploaded with the theme.
