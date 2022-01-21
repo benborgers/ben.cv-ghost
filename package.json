@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "NODE_ENV=development ghost run",
     "dev": "tailwindcss -i style.css -o assets/built.css --watch",
-    "build": "tailwindcss -i style.css -o assets/built.css --minify"
+    "build": "tailwindcss -i style.css -o assets/built.css --minify",
+    "zip": "npm run build && zip -r ben.cv-ghost.zip * && open https://ben.cv/ghost/#/settings/design/change-theme && open ."
   },
   "keywords": [],
   "author": "",
