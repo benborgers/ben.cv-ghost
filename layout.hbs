@@ -11,6 +11,8 @@
     <script src="{{asset "anchors.js"}}" defer></script>
 
     {{ghost_head}}
+
+    <meta property="og:image" content="https://v1.screenshot.11ty.dev/{{encode @root.post.url}}/opengraph/1:1/bigger" />
   </head>
   <body class="antialiased bg-neutral-50 text-neutral-700 p-4 pb-36">
     <div class="max-w-prose mx-auto">{{{body}}}</div>
