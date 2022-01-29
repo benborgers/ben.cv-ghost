@@ -7,7 +7,7 @@
     {{/prose}}
   </div>
 
-  {{#get "posts" include="tags,authors"}}
+  {{#get "posts" limit="all" include="tags,authors"}}
       {{#foreach posts}}
         <div data-post-{{date format="YYYY-M"}}>
           <p data-post-date-heading class="mt-8 text-lg sm:text-xl text-neutral-800 font-bold">{{date format="MMMM YYYY"}}</p>
